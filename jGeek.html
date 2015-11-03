@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Retransmission de parties d&#8217;échecs en ligne &laquo;  Journal d&#039;un Geek</title>
+<link rel="stylesheet" href="http://famille-michon.fr/journalgeek/wp-content/themes/glowing-amber-fr/style.css" type="text/css" media="screen" />
+<link rel="pingback" href="http://famille-michon.fr/journalgeek/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="Journal d&#039;un Geek &raquo; Flux" href="http://famille-michon.fr/journalgeek/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Journal d&#039;un Geek &raquo; Flux des commentaires" href="http://famille-michon.fr/journalgeek/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Journal d&#039;un Geek &raquo; Retransmission de parties d&#8217;échecs en ligne Flux des commentaires" href="http://famille-michon.fr/journalgeek/2011/12/21/retransmission-de-parties-dechecs-en-ligne/feed/" />
+<link rel='stylesheet' id='crayon-css'  href='http://famille-michon.fr/journalgeek/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://famille-michon.fr/journalgeek/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='http://famille-michon.fr/journalgeek/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.6.9","is_admin":"0","ajaxurl":"http:\/\/famille-michon.fr\/journalgeek\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Faites %s pour copier, %s pour coller","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://famille-michon.fr/journalgeek/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js'></script>
+<link rel='prev' title='Défragmentation LVM' href='http://famille-michon.fr/journalgeek/2011/08/01/defragmentation-lvm/' />
+<link rel='next' title='Dracut and past' href='http://famille-michon.fr/journalgeek/2012/08/29/dracut-and-past/' />
+<link rel='canonical' href='http://famille-michon.fr/journalgeek/2011/12/21/retransmission-de-parties-dechecs-en-ligne/' />
+<link rel='shortlink' href='http://famille-michon.fr/journalgeek/?p=107' />
+<link rel="stylesheet" href="http://famille-michon.fr/journalgeek/wp-content/plugins/wp-note/style.css" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="title"><h1>Journal d&#039;un Geek</h1></div>
+  	<div id="description">La connaissance ne vaut que si on la partage</div>  
+  		<div id="mainmenu">
+			<div id="rss"><a href="http://famille-michon.fr/journalgeek/feed/">RSS</a></div>
+				<ul id="menu">
+ 					 <li><a href="http://famille-michon.fr/journalgeek">Accueil</a></li>
+ 					<li class="page_item page-item-6"><a href="http://famille-michon.fr/journalgeek/a-propos/">A propos</a></li>
+<li class="page_item page-item-13"><a href="http://famille-michon.fr/journalgeek/le-libre-et-moi/">Le Libre et moi</a></li>
+<li class="page_item page-item-17"><a href="http://famille-michon.fr/journalgeek/mentions-diverses/">Mentions diverses</a></li>
+<li class="page_item page-item-15"><a href="http://famille-michon.fr/journalgeek/projets-libres/">Projets libres</a></li>
+				</ul>
+		</div>
+  			<div id="contenttop" class="clearfix">
+    			<div id="contentbottom">
+					
+<div id="breadcrumbs">
+<a href="http://famille-michon.fr/journalgeek">Journal d&#039;un Geek</a> &raquo;  &raquo; Retransmission de parties d&#8217;échecs en ligne</div>
+
+											
+					
+     
+
+
+	<div id="mainbody">
+
+	
+		
+
+		<div class="post-107 post type-post status-publish format-standard hentry category-expert category-programmation category-python tag-echecs tag-script" id="post-107">
+			<h2>Retransmission de parties d&#8217;échecs en ligne</h2>
+
+			<div class="entry">
+				<p><a href="http://famille-michon.fr/journalgeek/wp-content/uploads/2011/11/board.jpg"><img class="alignleft size-full wp-image-108" style="border: 1px solid black; margin: 5px;" title="Echiquier DGT" src="http://famille-michon.fr/journalgeek/wp-content/uploads/2011/11/board.jpg" alt="" width="150" height="150" /></a>Je joue aux échecs en Club depuis quasiment deux ans. Cela explique en partie la faible activité de ce site depuis cette période, car c&#8217;est un jeu très prenant dès lors que l&#8217;on souhaite progresser sérieusement, et que l&#8217;on souhaite ne pas être ridicule à vie dans les compétitions.</p>
+<p>L&#8217;utilisation principale de l&#8217;informatique pour les échecs consiste à disposer de gigantesques bases de données de parties et du lecteur qui va avec, chacun étant propriétaire ou non. Le lecteur va permettre notamment de rechercher des positions dans les parties qui se trouvent dans la base de données pour donner l&#8217;occasion au joueur de déterminer ce qui a été joué jusque-là à partir de cette position, ce qu&#8217;il s&#8217;est passé dès lors, ainsi que des statistiques sur les gains Blancs et Noirs sur chacun des coups joués. On peut aussi étudier les parties de Grands Maîtres, souvent annotées par des commentateurs pour mieux les comprendre et s&#8217;apercevoir qu&#8217;on ne joue vraiment pas dans la même cour.</p>
+<p>Les logiciels de bases de données permettent également de se préparer contre un joueur en étudiant dans ses parties la façon dont il joue, et surtout quelle ouverture (séquence de coups initiale) il joue le plus souvent. Enfin, les moteurs d&#8217;analyse permettent de faire étudier ses propres parties jouées par l&#8217;ordinateur, et de détecter ainsi les coups faibles qu&#8217;on a pu jouer lors de la partie, pour comprendre pourquoi on est passé à côté du gain, pourquoi le gain a été plus difficile, ou pourquoi on s&#8217;est lamentablement vautré.</p>
+<p>Ce rapide tour d&#8217;horizon de l&#8217;utilisation de l&#8217;informatique pour les joueurs (que d&#8217;ailleurs je n&#8217;ai pas le temps de pratiquer, ce qui explique probablement ma stagnation de niveau actuelle) n&#8217;est ici que pour signaler ce que ne traite pas cet article. Son sujet principal concerne la manière dont on peut retransmettre des parties sur internet en direct. Je parle non pas d&#8217;afficher une vidéo, mais bien de montrer les coups joués, dans l&#8217;ordre, avec la notation associée. Mon Club jouant dans l&#8217;élite nationale (j&#8217;ai dit le Club, pas moi), nous nous voyons confier régulièrement l&#8217;organisation d&#8217;évènements nationaux, où ce genre de retransmission est impératif. J&#8217;ai donc pu développer personnellement une certaine maîtrise du fonctionnement de ces procédures.</p>
+<p><span id="more-107"></span>Pour pouvoir retransmettre des parties, il faut disposer d&#8217;échiquiers sensitifs, les plus connus étant ceux de <strong>DGT</strong>. Il s&#8217;agit d&#8217;échiquiers d&#8217;une belle taille, particulièrement soignés tant au niveau du plateau que des pièces (pièce en bois vernies, plombées et feutrées). Bref, jouer dessus c&#8217;est le pied. Le plateau en lui-même est en substance un capteur disposant d&#8217;une mémoire et d&#8217;un firmware, et chaque pièce contient une puce lui permettant d&#8217;être identifiée par le plateau.</p>
+<p>Les plateaux se branchent en série en utilisant des doubleurs Ethernet, ce branchement permettant l&#8217;alimentation des échiquiers d&#8217;une part, et la communication via un protocole dédié avec le PC (branché sur port série) d&#8217;autre part.</p>
+<p>Lorsqu&#8217;un plateau est alimenté, il enregistre dans sa mémoire tous les évènements qui se passent sur l&#8217;échiquier (pose de pièce sur une case, retrait d&#8217;une pièce de la case, &#8230;), et répond au PC lorsque celui-ci l&#8217;interroge sur ces évènements. L&#8217;ensemble du protocole est fourni publiquement par DGT sur leur site, dans la section dédiée aux développeurs.</p>
+<p>&nbsp;</p>
+<h2>Toma</h2>
+<p>Le principal logiciel utilisé jusqu&#8217;à cette année pour réaliser les retransmissions était <strong>Toma</strong>, commercialisé par DGT. Ce logiciel assurait les tâches suivantes :</p>
+<ul>
+<li>Découverte des échiquiers ;</li>
+<li>Communication avec ceux-ci ;</li>
+<li>Interprétation des informations fournies par les échiquiers et validation des coups joués sur l&#8217;écran ;</li>
+<li>Génération de la <a href="http://fr.wikipedia.org/wiki/Notation_alg%C3%A9brique" target="_blank">notation algébrique</a> des parties ;</li>
+<li>Upload via FTP sur un site web ;</li>
+<li>Fourniture d&#8217;une application Flash pour la lecture des parties ainsi générées.</li>
+</ul>
+<p>Globalement, Toma fonctionne correctement. Toutefois, il accuse son âge, et les différentes fonctionnalités ajoutées au fil du temps ont complexifié son code au point de le rendre parfois instable, difficilement maintenable, voire impossible à améliorer (de l&#8217;aveu même d&#8217;un développeur de chez DGT). Notamment, des coups joués trop rapidement sur l&#8217;échiquier avaient tendance à &#8220;perdre&#8221; le logiciel, ce qui avait pour conséquence, au mieux d&#8217;arrêter la retransmission de la partie en cours (et il fallait donc rester à proximité pour aller regarder en urgence les coups joués sur les feuilles de partie et pouvoir corriger sur l&#8217;ordinateur), au pire de faire planter tout le logiciel et d&#8217;obliger un reboot, perdant ainsi toutes les informations sur les parties en cours (heureusement cela ne m&#8217;est jamais arrivé).</p>
+<p>En plus, Toma est un logiciel propriétaire, qui ne fonctionne que sous Windows, consomme énormément de RAM, et payant.</p>
+<p>A l&#8217;époque, j&#8217;avais réalisé un mode d&#8217;emploi qui peut toujours servir, notamment pour la méthodologie de préparation des échiquiers. Le voici : <a href="http://famille-michon.fr/journalgeek/wp-content/uploads/2011/11/utilisation_echiquiers_dgt.pdf">Manuel utilisation échiquiers DGT</a> (978 Kio).</p>
+<p>&nbsp;</p>
+<h2>La tentative d&#8217;évolution</h2>
+<p>L&#8217;année dernière, nous avons accueilli le Championnat de France féminin de parties rapides, et nous devions retransmettre des parties sur internet. Le mot &#8220;rapide&#8221; (pour les connaisseurs, la cadence était de 2&#215;15 min KO) m&#8217;a un peu fait peur, connaissant les faiblesses de Toma sur les coups joués trop vite. J&#8217;ai donc pris l&#8217;initiative de commencer à programmer un logiciel de remplacement et respectant le cahier des charges suivant :</p>
+<ul>
+<li>Multiplateforme ;</li>
+<li>Interrogeant directement la mémoire de l&#8217;échiquier plutôt que de réaliser un polling sur les positions ;</li>
+<li>Capable de gérer certains cas d&#8217;informations manquantes à partir des coups autorisés depuis la position courante ;</li>
+<li>Capable de demander une décision humaine en cas d&#8217;impossibilité de résoudre un problème automatiquement ;</li>
+<li>Capable de conserver en mémoire tous les coups en attente pendant la prise de décision humaine ;</li>
+<li>Autorisant une intervention humaine pour forcer un coup donné, même si cela ne correspond pas à ce que l&#8217;échiquier a envoyé ;</li>
+<li>Envoyant des informations via FTP comme Toma, mais utilisant le lecteur Flash fourni par DGT (avec l&#8217;idée de le remplacer à terme, mais j&#8217;étais juste en temps <img src="http://famille-michon.fr/journalgeek/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /> ) ;</li>
+<li>Capable de reconstruire l&#8217;ensemble des parties suivies même après un crash de l&#8217;application et/ou du PC.</li>
+</ul>
+<p>Bien sûr, tout cela supposait que je sache communiquer avec les échiquiers, mais DGT ayant publié le protocole, je ne m&#8217;inquiétais pas. J&#8217;ai donc commencé à développer des composants permettant de représenter des parties d&#8217;échecs en cours, et d&#8217;interpréter les informations en provenance des échiquiers, puis j&#8217;ai démarré l&#8217;implémentation du protocole série, jusqu&#8217;à buter sur un problème que je n&#8217;ai jamais pu résoudre.</p>
+<p>&nbsp;</p>
+<h2>Help, I need somebody, help !</h2>
+<p>Obligé de contacter DGT pour comprendre ce qu&#8217;il se passait et pour leur demander si le protocole décrit dans leur documentation (un bête fichier .h) était complète. La réponse fut rapide (une option de configuration du port série qui n&#8217;était pas précisée dans la doc : il faut placer une ligne du port série à 0V car sinon il fait du checksum hardware, que le plateau ne supporte pas), accompagnée d&#8217;une question : qu&#8217;est-ce que vous voulez faire ?</p>
+<p>Lorsque j&#8217;ai expliqué ce que je cherchais à réaliser, mon interlocuteur m&#8217;a indiqué qu&#8217;il était justement en train de travailler sur un tout nouveau logiciel qui remplacerait Toma à terme, et qui se basait sur les mêmes principes que ceux que j&#8217;avais définis pour le mien (la classe !). Il m&#8217;a donc proposé de le tester pour mon tournoi, ce que j&#8217;ai fait. Ce nouveau logiciel fourni depuis par DGT gratuitement en version finale est vraiment beaucoup plus efficace que Toma et m&#8217;a bluffé tant au niveau de la stabilité que de la qualité d&#8217;interprétation des coups joués sur l&#8217;échiquier (alors que je n&#8217;ai testé que la version alpha de l&#8217;époque, qui avait encore quelques bugs).</p>
+<p>J&#8217;ai donc arrêté mon propre développement (si d&#8217;aventure les jours passaient à 50h, je le reprendrai peut-être pour le fun), mais certains composants peuvent servir à d&#8217;autre. Je vous livre donc mon code en espérant qu&#8217;il puisse servir.</p>
+<p>&nbsp;</p>
+<h2>Principe de fonctionnement</h2>
+<p>L&#8217;idée derrière ce code est de s&#8217;adapter à la façon dont l&#8217;échiquier électronique communique sur le port série.  Celui-ci est décrit dans le fichier définissant le protocole, mais voici le principe de fonctionnement général.</p>
+<p>L&#8217;échiquier garde en mémoire l&#8217;ensemble des évènements qui sont intervenus. Il ne stocke pas les coups au sens propre (comme &#8220;la Dame noire se déplace de la case à d8 à la case d5 en prenant un Pion blanc&#8221; &#8211; ou &#8220;<strong>Dxd5</strong>&#8221; pour les intimes), mais le décompose en élément que le logiciel doit être capable de reconstruire. Dans notre exemple, l&#8217;historique présent en mémoire peut être :</p>
+<ol>
+<li>La case d8 devient vide ;</li>
+<li>Une Dame noire apparaît sur la case d7 ;</li>
+<li>d7 devient vide ;</li>
+<li>Dame noire sur d6 ;</li>
+<li>d6 devient vide ;</li>
+<li>d5 devient vide (retrait du Pion) ;</li>
+<li>Dame noire sur d5.</li>
+</ol>
+<p>Mais d&#8217;autres séquences sont aussi possibles, en fonction de divers paramètres :</p>
+<ul>
+<li>L&#8217;échiquier réalise plusieurs scans par seconde, mais pas suffisamment pour détecter le moindre changement. On peut donc détecter certains évènements avant d&#8217;autres, et se retrouver dans des situations où la même pièce paraît être sur l&#8217;échiquier à deux endroits à la fois, ou au contraire avoir disparu ;</li>
+<li>Le joueur ne glisse pas forcément la pièce sur l&#8217;échiquier : il peut la prendre sur la case de départ et l&#8217;amener directement sur la case d&#8217;arrivée ;</li>
+<li>Le joueur peut &#8220;bifurquer&#8221; par une autre case, soit parce qu&#8217;il se ravise avant de lâcher la pièce, soit parce qu&#8217;il n&#8217;a pas joué la pièce sur une trajectoire bien droite ;</li>
+<li>Le joueur peut prendre la pièce, la jouer, puis s&#8217;apercevoir que sa pièce est clouée et la ramener sur sa position de départ ;</li>
+<li>Le joueur peut commencer par retirer le Pion de l&#8217;échiquier avant de toucher à sa Dame, ou bien prendre le Pion en posant la Dame dans un mouvement simultané ;</li>
+<li>Etc&#8230;</li>
+</ul>
+<p>Il faut donc pouvoir interpréter ces différents cas de figure, de manière la plus automatisée possible. Le code interroge régulièrement l&#8217;échiquier qui retourne tous les évènements survenus depuis la dernière interrogation.</p>
+<p>&nbsp;</p>
+<h2>Code</h2>
+<p>Ce code est fourni sous licence GPLv3. L&#8217;auteur est moi-même (Guillaume MICHON). Comme toujours, il est fourni tel quel sans aucune garantie de fonctionnement ou d&#8217;inocuité. Bref, comme d&#8217;habitude pour tout logiciel libre (ou pas d&#8217;ailleurs&#8230; si si lisez bien les CLUF, vous hallucinerez). Il est composé de trois fichiers qui travaillent ensemble et qui ne sont pas totalement complets.</p>
+<p><strong><a href="http://famille-michon.fr/journalgeek/wp-content/uploads/2011/12/ChessBoard.py">ChessBoard.py</a></strong> (79 Kio) : C&#8217;est la base. Le but est de fournir un objet représentant un échiquier et les pièces qui s&#8217;y situent, capable de conserver l&#8217;historique des coups joués, de proposer les coups légaux à partir de la position actuelle, et de valider les coups joués au fur et à mesure qu&#8217;on les lui fournit. Le ChessBoard est capable de détecter les échecs, les mats, les pats, connaît toutes les règles officielles (prise en passant, promotion, roque), et peut charger une position à partir d&#8217;une notation <a href="http://fr.wikipedia.org/wiki/Notation_Forsyth-Edwards" target="_blank">FEN</a>. Il y a plusieurs choses améliorables :</p>
+<ul>
+<li>L&#8217;échiquier interdit tout coup illégal. Il peut être utile de les autoriser pour le cas où un humain &#8220;force&#8221; un coup (sur des parties rapides, les coups illégaux ne sont pas forcément rejoués) ;</li>
+<li>Des corrections sont à apporter (voir les tags <strong>XXX</strong>, <strong>FIXME</strong> et <strong>TODO</strong>). Par exemple, <strong>seekFEN()</strong> et <strong>seekPossibleMove()</strong> sont censés parcourir l&#8217;arbre des coups possibles à partir de la position actuelle, et retourner les différentes suites de coups amenant à la position (pour <strong>seekFEN()</strong>) ou à une position autorisant le coup (pour <strong>seekPossibleMove()</strong>) fourni en argument ;</li>
+<li>J&#8217;ai cherché à faire du générique, mais certaines parties du code s&#8217;appuient sur des suppositions, principalement par manque de temps. La plupart des suppositions concernent la position de départ des pièces. Ainsi, ChessBoard n&#8217;est pas compatible à ce jour avec des variations du jeu telles que le <a href="http://fr.wikipedia.org/wiki/Chess960" target="_blank">Chess960</a> ou encore les <a href="http://fr.wikipedia.org/wiki/%C3%89checs_f%C3%A9%C3%A9riques" target="_blank">échecs féériques</a>. Mais il est parfaitement fonctionnel pour les règles standards.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong><a href="http://famille-michon.fr/journalgeek/wp-content/uploads/2011/12/ChessGame.py">ChessGame.py</a></strong> (48 Kio). Ce fichier réalise la partie compliquée : interpréter des évènements (voir plus haut) en coups. L&#8217;idée du fonctionnement est qu&#8217;un coup est représenté par des évènements-clefs (retrait de la pièce de sa case de départ et dépose sur sa case d&#8217;arrivée), et que tous les autres évènements qui surviennent (sauf le retrait de l&#8217;éventuelle pièce prise, ainsi que quelques cas particuliers dans des règles comme le roque ou la promotion) ont forcément un évènement associé qui les annulent. A partir de ce principe, on est capable de proposer des coups candidats que le ChessBoard sous-jacent va valider comme des coups légaux ou pas. S&#8217;il y a ambiguïté (par exemple, une Tour apparaît sur une case alors qu&#8217;on détecte encore les deux Tours sur leurs cases de départ), on attend la suite des évènements pour la lever. Le ChessGame est également capable d&#8217;annuler un coup qu&#8217;il vient de générer s&#8217;il s&#8217;aperçoit qu&#8217;il s&#8217;est trompé dans son interprétation, voire de demander de l&#8217;aide humaine s&#8217;il ne s&#8217;en sort pas.</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://famille-michon.fr/journalgeek/wp-content/uploads/2011/12/DGTSerialBoardTranslator.py">DGTSerialBoardTranslator.py</a></strong> (31 Kio). Ce fichier implémente une partie du protocole de communication série entre le PC et les échiquiers et fournit une API pour une utilisation par un composant de plus haut niveau. Il s&#8217;appuie sur la bibliothèque <strong><a href="http://pyserial.sourceforge.net/" target="_blank">pySerial</a></strong> (version 2.5). Le code sait découvrir les échiquiers, leur envoyer des messages et les recevoir. Des fonctions sont codées pour obtenir la position, l&#8217;état de la pendule, l&#8217;historique des évènements, et ordonner l&#8217;écriture d&#8217;un &#8220;start&#8221; en mémoire de l&#8217;échiquier. Certaines ont été vaguement testées mais aucune n&#8217;est à considérer comme étant stable, puisque j&#8217;ai arrêté le développement pour me concentrer sur l&#8217;utilisation du nouveau logiciel de DGT. Il y a donc probablement des bugs à corriger, des méthodes supplémentaires à ajouter à l&#8217;API et un bon potentiel prisedetêteux sous-jacent.</p>
+<p>&nbsp;</p>
+<p><strong>Composants manquants</strong>. Voici les éléments supplémentaires qui étaient prévus :</p>
+<ul>
+<li>La &#8220;glue&#8221; utilisant DGTSerialBoardTranslator en bas niveau et construisant un ChessGame par échiquier détecté, qui permet la communication des deux composants, en sauvegardant au passage tout l&#8217;historique dans un fichier temporaire (en cas de crash) ;</li>
+<li>Le composant d&#8217;upload FTP ;</li>
+<li>Le composant d&#8217;affichage en AJAX ;</li>
+<li>Les possibilités d&#8217;intervention humaine sur ChessGame, ChessBoard et la partie &#8220;glue&#8221; ;</li>
+<li>La GUI montrant les positions des échiquiers, les positions des coups validés, les évènements en attente sur chaque échiquier, permettant la configuration initiale (choix du port série, fourniture des accès FTP, association échiquiers-joueurs -avec une dimension au niveau du tournoi et non de la ronde, pour éviter de ressaisir les mêmes noms à la ronde suivante-, etc&#8230;), et les interventions humaines en cours de partie.</li>
+</ul>
+<p>&nbsp;</p>
+
+								<p>Tags : <a href="http://famille-michon.fr/journalgeek/tag/echecs/" rel="tag">échecs</a>, <a href="http://famille-michon.fr/journalgeek/tag/script/" rel="tag">script</a></p>
+				<p class="postmetadata alt">
+					<small>
+						Cet article a été publié 
+												le mercredi 21 décembre 2011 à 12 h 19 min						et a été classé dans <a href="http://famille-michon.fr/journalgeek/category/expert/" rel="category tag">Expert</a>, <a href="http://famille-michon.fr/journalgeek/category/programmation/" rel="category tag">Programmation</a>, <a href="http://famille-michon.fr/journalgeek/category/programmation/python/" rel="category tag">Python</a>.
+						
+
+													Vous pouvez <a href="#respond">réagir</a>, ou faire un <a href="http://famille-michon.fr/journalgeek/2011/12/21/retransmission-de-parties-dechecs-en-ligne/trackback/" rel="trackback">trackback</a>.
+
+						
+					</small>
+				</p>
+
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="alignleft">&laquo; <a href="http://famille-michon.fr/journalgeek/2011/08/01/defragmentation-lvm/" rel="prev">Défragmentation LVM</a></div>
+			<div class="alignright"><a href="http://famille-michon.fr/journalgeek/2012/08/29/dracut-and-past/" rel="next">Dracut and past</a> &raquo;</div>
+		</div>
+	
+<!-- You can start editing here. -->
+<div class="navigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>
+<div class="clearfix"></div>
+	<h3 id="comments">Une réaction sur &#8220;Retransmission de parties d&#8217;échecs en ligne&#8221;</h3>
+
+	
+	<div class="commentlist">
+			<li class="comment even thread-even depth-1" id="comment-17438">
+				<div id="div-comment-17438" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='http://1.gravatar.com/avatar/73501bbef92d59b2d0f5e4442f5c4fcd?s=32&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://www.cpe95.org/spip.php?rubrique128' rel='external nofollow' class='url'>FredJust</a></cite> <span class="says">dit&nbsp;:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="http://famille-michon.fr/journalgeek/2011/12/21/retransmission-de-parties-dechecs-en-ligne/#comment-17438">
+			12 mai 2015 à 17 h 34 min</a>		</div>
+
+		<p>Bonjour</p>
+<p>je viens de tomber sur cet ancien article, je suis en train de réaliser un échiquier électronique en arduino de type DGT,<br />
+et je suis confronté au même problème que vous sauf qu&#8217;en plus mon échiquier ne détecte pas le type de pièce sur les cases.<br />
+(je n&#8217;ai que d8 s&#8217;éteint , d7 s&#8217;allume &#8230;)<br />
+Je scan 50 fois par seconde l&#8217;échiquier ce qui me permet de suivre les déplacement et a partir de tout cela je dois reconstruire la partie en PGN.<br />
+La partie matériel fonctionne très bien, il est déjà possible d&#8217;obtenir un PGN sur PC à posteriori avec une intervention humaine pour corriger les erreurs.<br />
+Mais elle ne sont pas si nombreuses et j&#8217;espère pouvoir faire un suivit en direct comme sur un échiquier DGT. Je vais regarder vos bibliothèques pour y piocher des idées.<br />
+Si vous avez le temps (lors de la 51° heure de la journée <img src="http://famille-michon.fr/journalgeek/wp-includes/images/smilies/icon_wink.gif" alt=";-)" class="wp-smiley" /> les détails de mon projet se trouve sur le site de mon club <a href="http://www.cpe95.org/spip.php?rubrique128" rel="nofollow">http://www.cpe95.org/spip.php?rubrique128</a></p>
+
+		<div class="reply"><a class='comment-reply-link' href='/journalgeek/2011/12/21/retransmission-de-parties-dechecs-en-ligne/?replytocom=17438#respond' onclick='return addComment.moveForm( "div-comment-17438", "17438", "respond", "107" )' aria-label='Répondre à FredJust'>Répondre</a></div>
+				</div>
+		</li><!-- #comment-## -->
+	</div>
+
+	
+ 
+
+
+<div id="respond">
+
+<h3>Réagissez</h3>
+
+<div class="cancel-comment-reply">
+	<small><a rel="nofollow" id="cancel-comment-reply-link" href="/journalgeek/2011/12/21/retransmission-de-parties-dechecs-en-ligne/#respond" style="display:none;">Cliquez ici pour annuler la réponse.</a></small>
+</div>
+
+
+<form action="http://famille-michon.fr/journalgeek/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' />
+<label for="author"><small>Nom (obligatoire)</small></label></p>
+
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' />
+<label for="email"><small>Courriel (ne sera pas publié) (obligatoire)</small></label></p>
+
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Site</small></label></p>
+
+
+<!--<p><small><strong>XHTML :</strong> Vous pouvez utiliser ces balises : <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; &lt;pre class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; &lt;span class=&quot;&quot; title=&quot;&quot; data-url=&quot;&quot;&gt; </code></small></p>-->
+
+<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Envoyez" />
+<input type='hidden' name='comment_post_ID' value='107' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="537f9dfba4" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="131"/></p>
+</form>
+
+</div>
+
+
+		</div>
+
+
+
+  
+<div class="clearfix"></div> 
+<div id="bottomwrapper" class="clearfix">
+	<div id="widgetleft">
+			
+	</div>
+	<div id="widgetcenter">
+				
+	</div>			
+	<div id="widgetright">
+			</div>
+</div>
+
+
+			
+    			</div><!-- end contentbottom -->
+  			</div><!-- end contenttop -->
+			
+	
+	
+</div><!-- end wrapper --><div id="footer">
+	Journal d&#039;un Geek est fièrement propulsé par
+		<a href="http://wordpress.org/">WordPress</a> - thème traduit par <a href="http://wordpress-tuto.fr/">WordPresstuto</a>
+		<br /><a href="http://famille-michon.fr/journalgeek/feed/">Articles (RSS)</a>
+		et <a href="http://famille-michon.fr/journalgeek/comments/feed/">Commentaires (RSS)</a>.
+		<!-- 71 queries. 0, 430 seconds. -->
+		<!-- your own custom footer widget position -->
+			</div>
+<script type='text/javascript' src='http://famille-michon.fr/journalgeek/wp-content/plugins/akismet/_inc/form.js'></script>
+<script type='text/javascript' src='http://famille-michon.fr/journalgeek/wp-includes/js/comment-reply.min.js'></script>
+</body>
+</html>
+
+<!-- Dynamic page generated in 0.418 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-11-03 23:50:46 -->
+
+<!-- Compression = gzip -->
